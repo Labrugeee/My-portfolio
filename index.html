@@ -2,49 +2,26 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mon portfolio</title>
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="index.css">
-        <script src="index.js"></script>
+
+        <script type="importmap">
+            {
+              "imports": {
+                "LISS": "./lib/LISS-main/index.js"
+              }
+            }
+        </script>
+
+        <script type="module" src="./components/header/index.js"></script>
     </head>
 
     <body>
+        <div id="header-container">
+            <my-header></my-header>
+        </div>
+            
 
-        <header id="header">
-
-            <div class="row">
-        
-                <div class="logo">
-                    <a href="/">
-                        <img src="assets/logo/Logo portfolio.png" alt="Logo">
-                    </a>
-                </div>
-        
-                <nav class="navbar">
-                    <ul id="nav">
-                        <li><a href="/about">à propos de moi</a></li>
-                        <li><a href="/parcours">parcours</a></li>
-                        <li><a href="/travaux">travaux</a></li>
-                        <li><a href="/contact">contacts</a></li>
-                        <li>
-                            <ul class="social">
-                                <li class="github">
-                                    <a href="https://github.com/Labrugeee" title="Suivez-moi sur GitHub !" target="_blank"></a>
-                                    <img src="assets/social logo/github.png" alt="GitHub Logo">
-                                </li>
-                                <li class="assessfirst">
-                                    <a href="https://my.assessfirst.com/profile/synthesis" title="Consultez mon profil AssessFirst !" target="_blank"></a>
-                                    <img src="assets/social logo/profile.png" alt="AssessFirst Logo">
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-        
-            </div>
-        
-        </header>
-        
     </body>
 
 </html>

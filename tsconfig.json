@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "target": "esnext",
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "strict": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "skipLibCheck": true,
+        "paths": {
+            "LISS": ["./lib/LISS-main/index.ts"],
+        }
+    },
+    "include": ["**/*.ts"],
+    "exclude": ["lib/**"]
+}
