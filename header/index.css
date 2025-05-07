@@ -1,0 +1,35 @@
+.row {
+    display: flex;
+    flex-basis: auto;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5em;
+    box-sizing: border-box;
+    background-color:#000000;
+    overflow: hidden;
+
+    & .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2em;
+
+        & li {
+            display: block;
+            line-height: 92px;
+            padding: 0 1em;
+            text-decoration: none;
+            text-transform: lowercase;
+            cursor: pointer;
+            transition: all .3s;
+
+            &:hover {
+                color: #508f00;
+            }
+        }
+    }
+}
