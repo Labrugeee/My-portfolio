@@ -1,0 +1,118 @@
+.dual-flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  height: 400px;
+}
+
+.dual-block {
+  position: relative;
+  width: calc(50% - 10em);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(.77,0,.18,1);
+  cursor: pointer;
+}
+
+.designer {
+  background-image: url('../../../../public/assets/banner/Bannière gauche.png');
+  margin-right: 10em;
+}
+
+.coder {
+  background-image: url('../../../../public/assets/banner/Bannière droite.png');
+}
+
+.dual-block h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  margin: 0;
+  z-index: 2;
+  transition: opacity 0.3s;
+}
+
+.dual-block-details {
+  background: rgba(255,255,255,0.95);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 80%;
+  z-index: 3;
+  animation: fadeIn 0.4s;
+}
+
+.dual-block-details h2 {
+  color: #333;
+  font-size: 2.5rem;
+  margin: 0 0 1rem 0;
+}
+
+.dual-block-details p {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Effet au survol */
+.dual-block.active {
+  transform: scale(1.05);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+.dual-block.hidden {
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1200px) {
+  .dual-flex-container {
+    padding: 0 1rem;
+  }
+  
+  .dual-block {
+    width: calc(50% - 5em);
+  }
+  
+  .designer {
+    margin-right: 5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .dual-flex-container {
+    flex-direction: column;
+    height: auto;
+    gap: 2rem;
+  }
+  
+  .dual-block {
+    width: 100%;
+    height: 300px;
+  }
+  
+  .designer {
+    margin-right: 0;
+  }
+} 
